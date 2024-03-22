@@ -1,6 +1,6 @@
 {
     "preload": "preload.js",
-    "logo": "calc.png",
+    "logo": "logo.png",
     "platform": ["win32", "darwin", "linux"],
     "development": {
       "main": ""
@@ -13,7 +13,7 @@
       {
         "code": "calc",
         "explain": "随机唯一值",
-        "icon": "calc.png",
+        "icon": "logo.png",
         "platform": ["win32", "darwin", "linux"],
         "cmds": [
           "calc",
