@@ -19,23 +19,9 @@
           "calc",
           "计算器",
           {
-            "type": "img",
-            "label": "图片匹配"
-          },
-          {
-            "type": "files",
-            "label": "文件匹配",
-            "fileType": "file",
-            "match": "/xxx/",
-            "minLength": 1,
-            "maxLength": 1
-          },
-          {
             "type": "regex",
-            "label": "文本正则匹配",
-            "match": "/xxx/i",
-            "minLength": 1,
-            "maxLength": 1
+            "label": "速记计算器",
+            "match": "/\\d+[\\+|\\-|\\*|\\/|\\%|\\^]+\\d+/i"
           },
           {
             "type": "over",
@@ -43,15 +29,6 @@
             "exclude": "/xxx/i",
             "minLength": 1,
             "maxLength": 1
-          },
-          {
-            "type": "window",
-            "label": "窗口动作",
-            "match": {
-              "app": ["xxx.app", "xxx.exe"],
-              "title": "/xxxx/",
-              "class": ["xxx"]
-            }
           }
         ]
       }

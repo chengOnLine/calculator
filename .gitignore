@@ -1,1 +1,2 @@
 *.upx
+/node_modules/

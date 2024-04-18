@@ -5,15 +5,21 @@ window.exports = {
        args: {
           // 进入插件应用时调用（可选）
           enter: (action, callbackSetList) => {
-             // 如果进入插件应用就要显示列表数据
-             callbackSetList([
+            const { type , payload } = action || {};
+            if( type === 'regex' ){
+              const expression = payload;
+              setTimeout( () => {
+                utools.setSubInputValue(expression);
+              } , 0 )
+            }             
+            callbackSetList([
               ...records.map( item => ({
                 title: item.expression,
                 description: ' = ' + item.value,
                 expression: item.expression,
                 value: item.value,
               }))
-             ])
+            ])
           },
           // 子输入框内容变化时被调用 可选 (未设置则无搜索)
           search: (action, searchWord, callbackSetList) => {
